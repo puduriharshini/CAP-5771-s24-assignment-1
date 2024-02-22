@@ -138,12 +138,12 @@ class Section1:
     ):
         # Enter your code and fill the `answer` dictionary
         print("Part 1C")
-        X, y, Xtest, ytest = u.prepare_data() # preparing initial dataset
-        Xtrain, ytrain = u.filter_out_7_9s(X, y)
-        Xtest, ytest = u.filter_out_7_9s(Xtest, ytest)
+        Xtrain, ytrain, Xtest, ytest = u.prepare_data() # preparing initial dataset
+        X_train, y_train = u.filter_out_7_9s(Xtrain, ytrain)
+        X_test, y_test = u.filter_out_7_9s(Xtest, ytest)
         clf = DecisionTreeClassifier(random_state=52) #defining clf and cv
         cv = KFold(n_splits=5, shuffle = True, random_state = 52)
-        acc_scores1 = u.train_simple_classifier_with_cv(Xtrain=Xtrain, ytrain=ytrain, clf=clf, cv=cv)
+        acc_scores1 = u.train_simple_classifier_with_cv(Xtrain=X_train, ytrain=y_train, clf=clf, cv=cv)
         u.print_cv_result_dict(acc_scores1) 
         answer = {}
         answer["clf"] = DecisionTreeClassifier(random_state = 52)  
@@ -433,6 +433,3 @@ class Section1:
         
         print(answer)
         return answer
-
-        
-       
