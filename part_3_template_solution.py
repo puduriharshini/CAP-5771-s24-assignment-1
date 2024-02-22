@@ -108,8 +108,8 @@ class Section3:
         print("3A")
         #Xtrain, ytrain, Xtest, ytest = u.prepare_data()
         
-        Xtrain, ytrain = Xtrain, ytrain
-        Xtest, ytest = Xtest, ytest
+        # Xtrain, ytrain = Xtrain, ytrain
+        # Xtest, ytest = Xtest, ytest
         clf = LogisticRegression(max_iter=300) 
         clf.fit(Xtrain, ytrain)  
 
@@ -159,10 +159,9 @@ class Section3:
         # Enter your code and fill the `answer` dictionary
         answer = {}
         print("Part 3B")
-        X, y, Xtest, ytest = u.prepare_data()
+        #X, y, Xtest, ytest = u.prepare_data()
         X, y = nu.filter_imbal_7_9s(X, y)
         Xtest, ytest = nu.filter_imbal_7_9s(Xtest, ytest)
-        Xtest, ytest = Xtest, ytest
         test_Xtrain = nu.scalex(X)
         test_Xtest = nu.scalex(Xtest)
         test_ytrain = nu.scaley(y)
