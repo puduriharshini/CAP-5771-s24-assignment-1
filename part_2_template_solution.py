@@ -70,10 +70,10 @@ class Section2:
         test_Xtest = nu.scalex(Xtest)
         test_ytrain = nu.scaley(ytrain)
         test_ytest = nu.scaley(ytest)
-        print("Xtrain elements scaled from 0 to 1 and represented as floating point numbers?  " +str(test_Xtrain))
-        print("Xtest elements scaled from 0 to 1 and represented as floating point numbers?  " +str(test_Xtest))
-        print("ytrain elements represented as integers? " +str(test_ytrain))
-        print("ytest elements represented as integers?" +str(test_ytest))
+        print("Are the Xtrain elements scaled from 0 to 1 and represented as floating point numbers?  " +str(test_Xtrain))
+        print("Are the Xtest elements scaled from 0 to 1 and represented as floating point numbers?  " +str(test_Xtest))
+        print("Are the ytrain elements represented as integers? " +str(test_ytrain))
+        print("Are the ytest elements represented as integers?" +str(test_ytest))
         
         #number of elements in each class
         uniq_cls_train, class_count_train = np.unique(ytrain, return_counts=True)
