@@ -161,6 +161,7 @@ class Section1:
                 score_valC[f'std_{metric}'] = std_value
 
         answer["scores"] = score_valC
+        return answer
     
 
 
