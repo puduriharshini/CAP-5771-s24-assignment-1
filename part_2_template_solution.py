@@ -137,7 +137,7 @@ class Section2:
         answer = {}
         print("2B")
 
-        X, y, Xtest, ytest = u.prepare_data()
+        #X, y, Xtest, ytest = u.prepare_data()
         
         answer = {}
         
