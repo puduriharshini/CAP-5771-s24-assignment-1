@@ -96,7 +96,7 @@ class Section1:
         test_Xtrain = nu.scalex(Xtrain)
         test_Xtest = nu.scalex(Xtest)
         
-        to ensure that our labels are integers, we test them
+        
         test_ytrain = nu.scaley(ytrain)
         test_ytest = nu.scaley(ytest)
         print("checking if Xtrain elements scaled from 0 to 1 and represented as floating point numbers? " +str(test_Xtrain))
