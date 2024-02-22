@@ -68,7 +68,7 @@ class Section1:
     def partA(self):
         # Return 0 (ran ok) or -1 (did not run ok)
         answer = u.starter_code()
-        print("Part 1A: "+ str(answer)) #output returns 0
+        print("1A: "+ str(answer)) #output returns 0
         return answer
     
 
@@ -111,8 +111,8 @@ class Section1:
         len_Ytest = len(ytest)
         max_Xtrain = Xtrain.max()
         max_Xtest = Xtest.max()
-        print(f"Part 1B - The lengths of Xtrain, Xtest, ytrain, ytest are: {len_Xtrain}, {len_Xtest}, {len_Ytrain}, {len_Ytest}")
-        print(f"Part 1B - The maximum value of Xtrain and Xtest is: {max_Xtrain}, {max_Xtest}")
+        print(f"1B - The lengths of Xtrain, Xtest, ytrain, ytest are: {len_Xtrain}, {len_Xtest}, {len_Ytrain}, {len_Ytest}")
+        print(f"1B - The maximum value of Xtrain and Xtest is: {max_Xtrain}, {max_Xtest}")
         answer["len_Xtrain"] = len_Xtrain
         answer["len_Xtest"] = len_Xtest
         answer["len_Ytrain"] = len_Ytrain
