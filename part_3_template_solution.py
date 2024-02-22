@@ -105,7 +105,7 @@ class Section3:
         - "score_test" : the topk accuracy score for the testing set
         """
 
-        print("3A")
+        # print("3A")
         Xtrain, ytrain, Xtest, ytest = u.prepare_data()
         
         clf = LogisticRegression(max_iter=300) 
@@ -132,7 +132,7 @@ class Section3:
             "text_rate_accuracy_change": "With the increase in k, top-k accuracy typically rises due to the model having more opportunities to encompass the correct class within its top k predictions. However, as k continues to grow, the incremental gains in accuracy tend to taper off",
             "text_is_topk_useful_and_why": "Top-k accuracy is valuable for situations where the precise ranking of the correct category is less critical than ensuring the correct category appears within the top k selections. This metric is especially pertinent to multi-class classification challenges involving numerous categories or scenarios where an approximate prediction holds significance"   })
 
-        print(answer)
+        # print(answer)
         return answer, Xtrain, ytrain, Xtest, ytest
 
     # --------------------------------------------------------------------------
@@ -156,7 +156,7 @@ class Section3:
         """"""
         # Enter your code and fill the `answer` dictionary
         answer = {}
-        print("Part 3B")
+        # print("Part 3B")
         X, y, Xtest, ytest = u.prepare_data()
         Xtrain, ytrain = nu.filter_imbal_7_9s(X, y)
         Xtest, ytest = nu.filter_imbal_7_9s(Xtest, ytest)
@@ -164,10 +164,10 @@ class Section3:
         test_Xtest = nu.scalex(Xtest)
         test_ytrain = nu.scaley(ytrain)
         test_ytest = nu.scaley(ytest)
-        print("Xtrain elements scaled from 0 to 1 and represented as floating point numbers? " +str(test_Xtrain))
-        print("Xtest elements scaled from 0 to 1 and represented as floating point numbers? " +str(test_Xtest))
-        print("ytrain elements represented as integers? " +str(test_ytrain))
-        print("ytest elements represented as integers? " +str(test_ytest))
+        # print("Xtrain elements scaled from 0 to 1 and represented as floating point numbers? " +str(test_Xtrain))
+        # print("Xtest elements scaled from 0 to 1 and represented as floating point numbers? " +str(test_Xtest))
+        # print("ytrain elements represented as integers? " +str(test_ytrain))
+        # print("ytest elements represented as integers? " +str(test_ytest))
         answer = {}
 
         length_Xtrain = len(Xtrain)
@@ -176,8 +176,8 @@ class Section3:
         length_ytest = len(ytest)
         max_Xtrain = Xtrain.max()
         max_Xtest = Xtest.max()
-        print(f"3B - The lengths of Xtrain, Xtest, ytrain, ytest is: {length_Xtrain}, {length_Xtest}, {length_ytrain}, {length_ytest}")
-        print(f"3B - The maximum value of Xtrain and Xtest is: {max_Xtrain}, {max_Xtest}")
+        # print(f"3B - The lengths of Xtrain, Xtest, ytrain, ytest is: {length_Xtrain}, {length_Xtest}, {length_ytrain}, {length_ytest}")
+        # print(f"3B - The maximum value of Xtrain and Xtest is: {max_Xtrain}, {max_Xtest}")
         answer["length_Xtrain"] = length_Xtrain 
         answer["length_Xtest"] = length_Xtest
         answer["length_ytrain"] = length_ytrain
@@ -187,7 +187,7 @@ class Section3:
 
         # Answer is a dictionary with the same keys as part 1.B
 
-        print(answer)
+        # print(answer)
         return answer, X, y, Xtest, ytest
 
     # --------------------------------------------------------------------------
@@ -210,7 +210,7 @@ class Section3:
         """"""
 
         
-        print("Part 3C")
+        # print("Part 3C")
         X, y, Xtest, ytest = u.prepare_data()
         Xtrain, ytrain = nu.filter_imbal_7_9s(X, y)
         Xtest, ytest = nu.filter_imbal_7_9s(Xtest, ytest)
@@ -262,7 +262,7 @@ class Section3:
         answer['is_precision_higher_than_recall'] = precision_higher_than_recall
         answer['explain_is_precision_higher_than_recall'] = "The model demonstrates greater precision than recall, indicating a stronger capability in accurately identifying true positive cases among all positive predictions. This scenario often occurs in datasets with an uneven class distribution, where the model is better at reducing the occurrence of false positives compared to minimizing false negatives. Essentially, the model is more successful at ensuring the positive predictions it makes are correct, rather than capturing every instance of actual positives"
         
-        print(answer)
+        # print(answer)
         return answer
 
     # --------------------------------------------------------------------------
@@ -280,7 +280,7 @@ class Section3:
         """"""
          # Enter your code and fill the `answer` dictionary
         answer = {}
-        print("Part 3D")
+        # print("Part 3D")
 
 
         X, y, Xtest, ytest = u.prepare_data()
@@ -330,5 +330,5 @@ class Section3:
             'explain_performance_difference': "Using class weights may improve recall for the minority class at the expense of precision, as the classifier is encouraged to correctly classify the minority class instances, potentially increasing the false positives"
         }
 
-        print(answer)
+        # print(answer)
         return answer
