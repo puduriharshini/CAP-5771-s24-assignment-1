@@ -88,9 +88,9 @@ class Section1:
         self,
     ):
         print("1B")
-        X, y, Xtest, ytest = u.prepare_data()
-        Xtrain, ytrain = u.filter_out_7_9s(X, y)
-        Xtest, ytest = u.filter_out_7_9s(Xtest, ytest)
+        Xtrain, ytrain, Xtest, ytest = u.prepare_data()
+        X_train, y_train = u.filter_out_7_9s(Xtrain, ytrain)
+        X_test, y_test = u.filter_out_7_9s(Xtest, ytest)
         test_Xtrain = nu.scalex(Xtrain)
         test_Xtest = nu.scalex(Xtest)
         
@@ -227,9 +227,9 @@ class Section1:
         # `answer` is a dictionary with keys set to each split, in this case: 2, 5, 8, 16
         # Therefore, `answer[k]` is a dictionary with keys: 'scores', 'cv', 'clf`
         print("Part 1E")
-        X, y, Xtest, ytest = u.prepare_data()
-        Xtrain, ytrain = u.filter_out_7_9s(X, y)
-        Xtest, ytest = u.filter_out_7_9s(Xtest, ytest)
+        Xtrain, ytrain, Xtest, ytest = u.prepare_data()
+        X_train, y_train = u.filter_out_7_9s(Xtrain, ytrain)
+        X_test, y_test = u.filter_out_7_9s(Xtest, ytest)
         
         answer = {}
         # Enter your code, construct the `answer` dictionary, and return it.
