@@ -187,7 +187,7 @@ class Section3:
 
         # Answer is a dictionary with the same keys as part 1.B
 
-        # print(answer)
+        print(answer)
         return answer, X, y, Xtest, ytest
 
     # --------------------------------------------------------------------------
@@ -239,16 +239,16 @@ class Section3:
         'std_recall': np.std(scores['test_recall'])
         }
         
-        #training classifier on training data of imbalanced data 
+         
         svc_clf.fit(Xtrain, ytrain)
         train_y_pred = svc_clf.predict(Xtrain)
         train_confusion_matrix = confusion_matrix(ytrain, train_y_pred)
         
-        # Predict on the test set and compute the confusion matrix
+      
         test_y_pred = svc_clf.predict(Xtest)
         test_confusion_matrix = confusion_matrix(ytest, test_y_pred)
         
-        # Create the answer dictionary
+      
         answer = {
             'scores': scores_3B,
             'cv': skf,
