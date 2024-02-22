@@ -68,7 +68,7 @@ class Section1:
     def partA(self):
         # Return 0 (ran ok) or -1 (did not run ok)
         answer = u.starter_code()
-       # print("Part 1A: "+ str(answer)) #output returns 0
+        print("Part 1A: "+ str(answer)) #output returns 0
         return answer
     
 
@@ -87,20 +87,20 @@ class Section1:
     def partB(
         self,
     ):
-        #print("1B")
+        print("1B")
         X, y, Xtest, ytest = u.prepare_data()
         Xtrain, ytrain = u.filter_out_7_9s(X, y)
         Xtest, ytest = u.filter_out_7_9s(Xtest, ytest)
         test_Xtrain = nu.scalex(Xtrain)
         test_Xtest = nu.scalex(Xtest)
         
-        # to ensure that our labels are integers, we test them
+        to ensure that our labels are integers, we test them
         test_ytrain = nu.scaley(ytrain)
         test_ytest = nu.scaley(ytest)
-        # print("Xtrain elements scaled from 0 to 1 and represented as floating point numbers? " +str(test_Xtrain))
-        # print("Xtest elements scaled from 0 to 1 and represented as floating point numbers? " +str(test_Xtest))
-        # print("ytrain elements represented as integers? " +str(test_ytrain))
-        # print("ytest elements represented as integers? " +str(test_ytest))
+        print("checking if Xtrain elements scaled from 0 to 1 and represented as floating point numbers? " +str(test_Xtrain))
+        print("checking if Xtest elements scaled from 0 to 1 and represented as floating point numbers? " +str(test_Xtest))
+        print("checking if ytrain elements represented as integers? " +str(test_ytrain))
+        print("checking if ytest elements represented as integers? " +str(test_ytest))
         answer = {}
 
         # Enter your code and fill the `answer` dictionary
@@ -111,8 +111,8 @@ class Section1:
         len_Ytest = len(ytest)
         max_Xtrain = Xtrain.max()
         max_Xtest = Xtest.max()
-        # print(f"Part 1B - The lengths of Xtrain, Xtest, ytrain, ytest are: {len_Xtrain}, {len_Xtest}, {len_Ytrain}, {len_Ytest}")
-        # print(f"Part 1B - The maximum value of Xtrain and Xtest is: {max_Xtrain}, {max_Xtest}")
+        print(f"Part 1B - The lengths of Xtrain, Xtest, ytrain, ytest are: {len_Xtrain}, {len_Xtest}, {len_Ytrain}, {len_Ytest}")
+        print(f"Part 1B - The maximum value of Xtrain and Xtest is: {max_Xtrain}, {max_Xtest}")
         answer["len_Xtrain"] = len_Xtrain
         answer["len_Xtest"] = len_Xtest
         answer["len_Ytrain"] = len_Ytrain
@@ -137,7 +137,7 @@ class Section1:
         y: NDArray[np.int32],
     ):
         # Enter your code and fill the `answer` dictionary
-        # print("Part 1C")
+        print("Part 1C")
         X, y, Xtest, ytest = u.prepare_data() # preparing initial dataset
         Xtrain, ytrain = u.filter_out_7_9s(X, y)
         Xtest, ytest = u.filter_out_7_9s(Xtest, ytest)
@@ -203,7 +203,7 @@ class Section1:
                 score_valD[f'std_{metric}'] = std_value
 
         answer["scores"] = score_valD
-        # print("K-Fold splits the data into k fixed subsets and rotates them for training and testing, while ShuffleSplit randomly shuffles and splits the data into training and testing subsets for each iteration.")
+        print("K-Fold splits the data into k fixed subsets and rotates them for training and testing, while ShuffleSplit randomly shuffles and splits the data into training and testing subsets for each iteration.")
 
         return answer
 
@@ -255,7 +255,7 @@ class Section1:
                 'clf': clf
             }
 
-        # print("Noticing Difference: While the standard deviation does tend to vary, the mean generally stays the same")
+        print("Noticing Difference: While the standard deviation does tend to vary, the mean generally stays the same")
         return answer
 
     # ----------------------------------------------------------------------
@@ -311,7 +311,7 @@ class Section1:
         }
 
 
-        # print(answer)
+        print(answer)
         return answer
 
     # ----------------------------------------------------------------------
@@ -392,24 +392,24 @@ class Section1:
         train_accuracy = best_estimator.score(Xtrain, ytrain)
         test_accuracy = best_estimator.score(Xtest, ytest)
 
-        # training and testing accuracy
-        # print(f"The training accuracy of the best estimator: {train_accuracy}")
-        # print(f"Testing accuracy of the best estimator: {test_accuracy}")
+        training and testing accuracy
+        print(f"The training accuracy of the best estimator: {train_accuracy}")
+        print(f"Testing accuracy of the best estimator: {test_accuracy}")
 
-        # comments on results
-        # if train_accuracy > mean_acc_cv:
-        #     print("Training accuracy is higher than the mean CV accuracy.")
-        # elif train_accuracy < mean_acc_cv:
-        #     print("Training accuracy is lower than the mean CV accuracy.")
-        # else:
-        #     print("Training accuracy is about the same as the mean CV accuracy.")
+        comments on results
+        if train_accuracy > mean_acc_cv:
+            print("Training accuracy is higher than the mean CV accuracy.")
+        elif train_accuracy < mean_acc_cv:
+            print("Training accuracy is lower than the mean CV accuracy.")
+        else:
+            print("Training accuracy is about the same as the mean CV accuracy.")
 
-        # if test_accuracy > mean_acc_cv:
-        #     print("Testing accuracy is higher than the mean CV accuracy.")
-        # elif test_accuracy < mean_acc_cv:
-        #     print("Testing accuracy is lower than the mean CV accuracy.")
-        # else:
-        #     print("Testing accuracy is about the same as the mean CV accuracy.")
+        if test_accuracy > mean_acc_cv:
+            print("Testing accuracy is higher than the mean CV accuracy.")
+        elif test_accuracy < mean_acc_cv:
+            print("Testing accuracy is lower than the mean CV accuracy.")
+        else:
+            print("Testing accuracy is about the same as the mean CV accuracy.")
 
 
 
@@ -431,7 +431,7 @@ class Section1:
         }
 
         
-        # print(answer)
+        print(answer)
         return answer
 
         
