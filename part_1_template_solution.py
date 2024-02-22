@@ -88,9 +88,11 @@ class Section1:
         self,
     ):
         print("1B")
-        Xtrain, ytrain, Xtest, ytest = u.prepare_data()
-        X_train, y_train = u.filter_out_7_9s(Xtrain, ytrain)
-        X_test, y_test = u.filter_out_7_9s(Xtest, ytest)
+        
+        Xtrain, ytrain = u.filter_out_7_9s(Xtrain, ytrain)
+        Xtest, ytest = u.filter_out_7_9s(Xtest, ytest)
+        test_Xtrain = nu.scalex(Xtrain)
+        test_Xtest = nu.scalex(Xtest)
         test_Xtrain = nu.scalex(Xtrain)
         test_Xtest = nu.scalex(Xtest)
         
